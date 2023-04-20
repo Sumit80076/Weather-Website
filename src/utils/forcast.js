@@ -11,6 +11,8 @@ const forcast=(address,callback)=>{
         }
         else{
             callback(undefined,"Temperature is "+response.body.main.temp+", It feels Like "+response.body.main.feels_like+" outside.")
+            callback(undefined,"Humidity:"+response.body.main.humidity)
+            callback(undefined,"Pressure:"+response.body.main.pressure)
         }
     })
 }
