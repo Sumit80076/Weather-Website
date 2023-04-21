@@ -10,7 +10,7 @@ const forcast=(address,callback)=>{
             callback("Unable to find location,Try another location.",undefined)
         }
         else{
-            callback(undefined,"Temperature is "+response.body.main.temp+", It feels Like "+response.body.main.feels_like+" outside.")
+            callback(undefined,"Temperature is "+response.body.main.temp+" Degrees"+", It feels Like "+response.body.main.feels_like+" Degrees outside,"+" Pressure:"+response.body.main.pressure+", Humidity:"+response.body.main.humidity+" Wind Speed:"+response.body.wind.speed)
         }
     })
 }
